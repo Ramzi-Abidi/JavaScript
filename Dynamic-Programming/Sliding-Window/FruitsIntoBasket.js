@@ -7,14 +7,14 @@
 
 export const totalFruit = function (arr) {
   let max = 0
-  const hash = {}
+  let hash = {}
   let j = 0
   let objLength = 0
 
   for (let i = 0; i < arr.length; i++) {
     if (!hash[arr[i]]) {
       hash[arr[i]] = 1
-      objLength++
+      objLength+=1
     } else {
       hash[arr[i]]++
     }
@@ -28,7 +28,7 @@ export const totalFruit = function (arr) {
           delete hash[arr[j]]
           objLength--
         }
-        j++
+        j+=1
       }
     }
   }
